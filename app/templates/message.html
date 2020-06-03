@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Redacted Data</title>
+</head>
+<body>
+    <h1>Redacted Card Number: {{ cc_number }}</h1>
+    <h1>Redacted Expiration Date: {{ exp_date }}</h1>
+    <h1>Redacted CVV: {{ cvv }}</h1>
+    <h2>Enter Aliased Details to Reveal:</h2>
+    <form method="post" action="/forward">
+        <div>
+            <label for="cc_number">Card Number</label>
+            <input type="text" name="cc_number">
+        </div>
+        <div>
+            <label for="exp_date">Expiration Date</label>
+            <input type="text" name="exp_date">
+        </div>
+        <div>
+            <label for="cvv">CVV</label>
+            <input type="text" name="cvv">
+        </div>
+        <div>
+            <button type="submit">Reveal data!</button>
+        </div>
+    </form>
+</body>
+</html>
